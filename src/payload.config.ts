@@ -4,12 +4,16 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb'
 // import Examples from './collections/Examples';
 import Users from './collections/Users';
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { webpackBundler } from '@payloadcms/bundler-webpack';
+
+require('dotenv').config();
 
 export default buildConfig({
   serverURL: 'http://localhost:3000',
   db: mongooseAdapter({url: process.env.MONGODB_URI}),
   editor: lexicalEditor({}),
   admin: {
+    bundler: webpackBundler(),
     user: Users.slug,
   },
   collections: [
