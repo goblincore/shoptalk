@@ -7,7 +7,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { webpackBundler } from '@payloadcms/bundler-webpack';
 
 export default buildConfig({
-  serverURL: 'http://localhost:3000',
+  serverURL: 'https://shoptalk.payloadcms.app',
   cors: '*',
   db: mongooseAdapter({url: process.env.MONGODB_URI}),
   editor: lexicalEditor({}),
