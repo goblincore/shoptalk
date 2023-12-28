@@ -1,5 +1,4 @@
 # shoptalk
-[![Netlify Status](https://api.netlify.com/api/v1/badges/64a745eb-de4d-4587-8aa0-ade26b949721/deploy-status)](https://app.netlify.com/sites/boisterous-taffy-a98549/deploys)
 
 This project was created using create-payload-app using the blank template.
 
