@@ -7,7 +7,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export default buildConfig({
   serverURL: 'http://localhost:3000',
-  db: mongooseAdapter({}),
+  db: mongooseAdapter({url: process.env.MONGODB_URI}),
   editor: lexicalEditor({}),
   admin: {
     user: Users.slug,
