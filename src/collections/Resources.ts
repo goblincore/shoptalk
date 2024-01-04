@@ -10,6 +10,13 @@ const ResourcesCollection: CollectionConfig = {
     fields: [
         { name: 'name', type: 'text' },
         { name: 'description', type: 'text' },
+        {
+            name: 'department',
+            type: 'relationship',
+            required: true,
+            relationTo: 'department',
+            hasMany: false,
+        },
     ],
 };
 
