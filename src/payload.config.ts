@@ -5,6 +5,8 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import Users from './collections/Users';
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { webpackBundler } from '@payloadcms/bundler-webpack';
+import ResourcesCollection from './collections/Resources';
+import DepartmentsCollection from './collections/Departments';
 
 export default buildConfig({
   serverURL: 'https://shoptalk.payloadcms.app',
@@ -17,6 +19,8 @@ export default buildConfig({
   },
   collections: [
     Users,
+    DepartmentsCollection,
+    ResourcesCollection,
     // Add Collections here
     // Examples,
   ],
