@@ -9,7 +9,14 @@ const BookingsCollection: CollectionConfig = {
     },
     fields: [
         { name: 'userName', type: 'text' },
-        { name: 'times', type: 'text' },
+        { name: 'time', type: 'text' },
+        {
+            name: 'machine',
+            type: 'relationship',
+            required: true,
+            relationTo: 'resource',
+            hasMany: false,
+        },
         { name: 'description', type: 'text' },
     ],
 };
