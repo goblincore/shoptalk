@@ -7,6 +7,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { webpackBundler } from '@payloadcms/bundler-webpack';
 import ResourcesCollection from './collections/Resources';
 import DepartmentsCollection from './collections/Departments';
+import BookingsCollection from './collections/Bookings';
 
 export default buildConfig({
   serverURL: 'https://shoptalk-admin.payloadcms.app',
@@ -21,6 +22,7 @@ export default buildConfig({
     Users,
     DepartmentsCollection,
     ResourcesCollection,
+    BookingsCollection,
     // Add Collections here
     // Examples,
   ],
