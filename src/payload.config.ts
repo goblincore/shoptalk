@@ -9,7 +9,7 @@ import ResourcesCollection from './collections/Resources';
 import DepartmentsCollection from './collections/Departments';
 
 export default buildConfig({
-  serverURL: 'https://shoptalk.payloadcms.app',
+  serverURL: 'https://shoptalk-admin.payloadcms.app',
   cors: '*',
   db: mongooseAdapter({url: process.env.MONGODB_URI}),
   editor: lexicalEditor({}),
