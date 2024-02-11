@@ -8,6 +8,7 @@ import { webpackBundler } from '@payloadcms/bundler-webpack';
 import ResourcesCollection from './collections/Resources';
 import DepartmentsCollection from './collections/Departments';
 import BookingsCollection from './collections/Bookings';
+import { getResource } from './endpoints/getResource';
 
 export default buildConfig({
   serverURL: 'https://shoptalk-admin.payloadcms.app',
@@ -26,6 +27,9 @@ export default buildConfig({
     // Add Collections here
     // Examples,
   ],
+  endpoints: [
+    { method: 'get', path: '/get-resource', handler: getResource },
+],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
