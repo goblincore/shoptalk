@@ -3,13 +3,16 @@ import payload from 'payload';
 
 
 export const getResource: PayloadHandler = async (req, res) => {
+    console.log('///req query', req?.query?.resource);
     try {
-        if (req?.body?.id) return;
+        if(!req?.query?.resource) throw new Error('No resource id provided');
         const resource = await payload.findByID({
-            id: req?.body?.id,
+            id: req?.query?.resource,
             collection: 'resource',
             depth: 3,
         });
+
+        console.log('///resource', resource);
 
         res.status(200).json(resource);;
     } catch (err) {
