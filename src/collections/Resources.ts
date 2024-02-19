@@ -10,6 +10,7 @@ const ResourcesCollection: CollectionConfig = {
     fields: [
         { name: 'name', type: 'text' },
         { name: 'description', type: 'text' },
+        { name: 'costPerHr', type: 'number' },
         {
             name: 'department',
             type: 'relationship',
