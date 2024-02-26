@@ -6,6 +6,7 @@ const DepartmentsCollection: CollectionConfig = {
     admin: {
         disableDuplicate: true,
         hideAPIURL: true,
+        useAsTitle: 'name',
     },
     fields: [
         { name: 'name', type: 'text' },
