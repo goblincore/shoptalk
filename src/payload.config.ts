@@ -11,7 +11,7 @@ import BookingsCollection from './collections/Bookings';
 import { getResource } from './endpoints/getResource';
 
 export default buildConfig({
-  serverURL: 'http://localhost:3000',
+  serverURL: 'https://shoptalk-admin.payloadcms.app',
   cors: '*',
   db: mongooseAdapter({url: process.env.MONGODB_URI}),
   editor: lexicalEditor({}),
