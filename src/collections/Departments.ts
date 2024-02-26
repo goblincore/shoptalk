@@ -11,6 +11,7 @@ const DepartmentsCollection: CollectionConfig = {
     fields: [
         { name: 'name', type: 'text' },
         { name: 'description', type: 'text' },
+        { name: 'location', type: 'text' },
     ],
 };
 
